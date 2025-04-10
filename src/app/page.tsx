@@ -36,25 +36,26 @@ export default function Home() {
           <h2 className="section-title">Proyectos Destacados</h2>
           <div className="proyecto-card">
             <h3>Readigo</h3>
-            <p>Estructura de base de datos y endpoints funcionales.</p>
+            <p>Aplicación web para la compra y venta de libros, con un panel de administración que permite gestionar a los motoristas. Incluye una estructura de base de datos optimizada y endpoints funcionales.</p>
           </div>
           <div className="proyecto-card">
             <h3>Diancrohet</h3>
-            <p>Backend para productos, ventas e inventario.</p>
+            <p>Página web de compra y venta de productos de crochet, que incluye un panel administrativo para gestionar inventarios. Cuenta con una estructura de base de datos eficiente y endpoints completamente funcionales.</p>
           </div>
           <div className="proyecto-card">
             <h3>SkyVibe</h3>
-            <p>Gestión de vuelos, aerolíneas y reservas.</p>
+            <p>Página web para la reserva y compra de boletos de avión, con una estructura de base de datos robusta y endpoints funcionales.</p>
           </div>
           <div className="proyecto-card">
             <h3>Congreso UNAH 2025</h3>
-            <p>Administración de ponencias y registros.</p>
+            <p>Página web destinada al Congreso de la Universidad Nacional Autónoma de Honduras 2025. Incluye una estructura de base de datos bien definida y endpoints funcionales.</p>
           </div>
           <div className="proyecto-card">
             <h3>Vero</h3>
-            <p>Backend, base de datos y endpoints principales.</p>
+            <p>Aplicación para la gestión de suscripciones de viajes semanales y mensuales. Cuenta con una estructura de base de datos optimizada y endpoints completamente funcionales.</p>
           </div>
         </section>
+
 
         {/* Sección Habilidades */}
         <section id="habilidades" className="section-profile section-habilidades">
