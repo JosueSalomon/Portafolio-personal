@@ -1,103 +1,99 @@
-import Image from "next/image";
+// src/app/page.tsx
+
+'use client';
+
+import Navbar from '../components/Navbar';
+import useScrollAnimations from '../hooks/useScrollAnimations';
+import './styles.css';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  useScrollAnimations();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  return (
+    <>
+      <Navbar />
+
+      <main className="pt-20 max-w-4xl mx-auto px-4 space-y-16">
+        {/* Sección Perfil */}
+        <section id="perfil" className="section-profile">
+          <h2 className="section-title">Perfil Profesional</h2>
+          <p className="section-text">
+            Apasionado por el desarrollo backend, redes e infraestructura, con interés en ciberseguridad y soluciones escalables. Me destaco por ser proactivo, analítico y orientado a resultados. Actualmente colaboro en el backend de <strong>Vero</strong>, una app de viajes por suscripción. Busco realizar mis prácticas profesionales en un entorno real.
+          </p>
+        </section>
+
+        {/* Sección Educación */}
+        <section id="educacion" className="section-profile">
+          <h2 className="section-title">Educación</h2>
+          <ul className="list">
+            <li><strong>Ingeniería en Sistemas</strong> – UNAH (2021 - Actualidad)</li>
+            <li><strong>Bachillerato General</strong> – Metropolitan School (2011 - 2020)</li>
+          </ul>
+        </section>
+
+        {/* Sección Proyectos */}
+        <section id="proyectos" className="section-profile section-proyectos">
+          <h2 className="section-title">Proyectos Destacados</h2>
+          <div className="proyecto-card">
+            <h3>Readigo</h3>
+            <p>Estructura de base de datos y endpoints funcionales.</p>
+          </div>
+          <div className="proyecto-card">
+            <h3>Diancrohet</h3>
+            <p>Backend para productos, ventas e inventario.</p>
+          </div>
+          <div className="proyecto-card">
+            <h3>SkyVibe</h3>
+            <p>Gestión de vuelos, aerolíneas y reservas.</p>
+          </div>
+          <div className="proyecto-card">
+            <h3>Congreso UNAH 2025</h3>
+            <p>Administración de ponencias y registros.</p>
+          </div>
+          <div className="proyecto-card">
+            <h3>Vero</h3>
+            <p>Backend, base de datos y endpoints principales.</p>
+          </div>
+        </section>
+
+        {/* Sección Habilidades */}
+        <section id="habilidades" className="section-profile section-habilidades">
+          <h2 className="section-title">Habilidades</h2>
+          <div className="habilidades-card">
+            <h3>Técnicas</h3>
+            <ul className="list">
+              <li><strong>Lenguajes:</strong> JavaScript, Python, TypeScript, Java</li>
+              <li><strong>Frameworks:</strong> Django, Laravel, Node.js, Next.js, Spring Boot</li>
+              <li><strong>Bases de datos:</strong> MongoDB, Oracle, MySQL, PostgreSQL</li>
+              <li><strong>Despliegue:</strong> Vercel, Render</li>
+              <li><strong>Control de versiones:</strong> Git, GitHub</li>
+            </ul>
+          </div>
+          <div className="habilidades-card">
+            <h3>Blandas</h3>
+            <ul className="list">
+              <li>Trabajo en equipo y comunicación efectiva</li>
+              <li>Compromiso, responsabilidad y autonomía</li>
+              <li>Aprendizaje continuo y pensamiento lógico</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Sección Contacto */}
+        <section id="contacto" className="section-profile section-contacto">
+          <h2 className="section-title">Contacto</h2>
+          <p className="section-text">
+            📧 josueisacsalomonlanda@gmail.com <br />
+            📱 +504 9704 7919 <br />
+            🧑‍💻 <a href="https://github.com/JosueSalomon" className="link">github.com/JosueSalomon</a>
+          </p>
+          <h3 className="sub-title">Referencias</h3>
+          <ul className="list">
+            <li><strong>Ing. Alex Moncada:</strong> +504 9525-7750</li>
+            <li><strong>Ing. Erick Reyes:</strong> +504 9890-3878</li>
+          </ul>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
